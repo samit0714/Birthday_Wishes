@@ -129,20 +129,27 @@ img {
 }
 /* Mobile screen ke liye adjustments */
 @media (max-width: 768px) {
-    .container {
-        width: 100% !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+    /* Main titles ki sizing aur tight spacing sahi karne ke liye */
+    h1, .main-title {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
     }
-    
-    /* Agar image bhot badi ho kar screen se bahar ja rahi hai */
-    img {
-        max-width: 100% !important;
+
+    /* Cake image aur text ke beech gaps set karne ke liye */
+    .cake, img {
+        max-width: 85% !important; /* Cake ka size thoda mobile ke hisab se chota kiya */
+        display: block !important;
+        margin: 20px auto !important; /* Upar neeche space banayega */
         height: auto !important;
     }
 
-    /* Text size agar bhot bada lag raha ho mobile par */
-    h1, .main-title {
-        font-size: 24px !important; 
+    /* Jo text cake ke piche chhup raha hai usko niche push karne ke liye */
+    .text-content, p, h3 {
+        margin-top: 25px !important;
+        font-size: 18px !important;
+        line-height: 1.5 !important;
+        position: relative !important;
+        z-index: 10 !important; /* Taaki text hamesha upar dikhe */
     }
 }
