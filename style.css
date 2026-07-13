@@ -127,3 +127,22 @@ img {
     position: absolute;
     padding-top: 250px;
 }
+/* Mobile screen ke liye adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Agar image bhot badi ho kar screen se bahar ja rahi hai */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Text size agar bhot bada lag raha ho mobile par */
+    h1, .main-title {
+        font-size: 24px !important; 
+    }
+}
